@@ -1,0 +1,9 @@
+
+
+
+// REM font-size.
+@mixin fontSize($size, $lineHeight: $line-height-default) {
+  font-size: $size; // Fallback in px.
+  font-size: ($size / 10px) * 1rem;
+  line-height: ($lineHeight / $size ) * 100%;
+}

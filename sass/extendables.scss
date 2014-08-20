@@ -1,0 +1,21 @@
+
+
+
+// Aligns content side by side. The other element needs to have float set.
+// With this method one deosn't have to use overflow: hidden.
+.sidefloat {
+  display:table-cell;
+  vertical-align:top;
+  width:10000px;
+  //=display:block;  // IE7 and below
+  //=zoom:1;         // IE7 and below
+  //=width:auto;     // IE7 and below
+}
+
+
+
+.ferratum-date {
+  color: #F29726;
+  font-size: 16px;
+  font-weight: bold;
+}

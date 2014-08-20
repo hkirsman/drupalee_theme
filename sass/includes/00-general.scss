@@ -1,0 +1,116 @@
+
+
+// Load the fonts.
+@import url('../fonts/stylesheet.css');
+
+
+
+@if $file == editor {
+  body {
+    margin: 15px;
+    max-width: 830px
+  }
+}
+
+
+
+@if $file == editor or
+    $file == global {
+  // Overwrite Bootstrap default margin of text elements.
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6,
+  p,
+  ul,
+  ol {
+    margin-bottom: $line-height-computed;
+  }
+  blockquote {
+    padding: $line-height-computed;
+  }
+  pre {
+    margin-bottom: $line-height-computed;
+    padding: ($line-height-computed - 1);
+  }
+
+  .node .field-name-body {
+    ul {
+      list-style-type: none;
+      margin-left: 0;
+      padding-left: 0;
+
+      li {
+        background-image: url(../img/bullet.png);
+        background-position: 0 0.4em;
+        background-repeat: no-repeat;
+        // font-weight: bold;
+        font-family: $font-family-serif-bold;
+        padding-left: 17px;
+      }
+    }
+  }
+
+  strong,
+  b {
+    font-family: $font-family-serif-bold;
+    font-weight: normal;
+  }
+}
+
+
+
+@if $file == global {
+  html,
+  body {
+    height: 100%;
+  }
+
+  .wrap {
+    margin-bottom: -102px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+  }
+
+  footer.footer {
+    margin-top: 0;
+    padding: 0;
+  }
+
+  footer.footer .container,
+  .push {
+    height: 102px;
+  }
+
+  body {
+    // background: #006BA7;
+  }
+
+  img {
+    // max-width: 100%;
+  }
+
+  iframe {
+    // display: block;
+    // width: 100%;
+  }
+
+  // Fix body top margin if admin-menu is active.
+  body.admin-menu {
+    margin-top: 29px !important;
+  }
+
+  // To fix the "Panels In-Place Editor".
+  // It might break other modals because I don't know why the default settings where not there.
+  .modal-body {
+    overflow: auto;
+    padding: 1em 1em 0 1em;
+  }
+
+  .form-control {
+    box-shadow: none;
+  }
+}

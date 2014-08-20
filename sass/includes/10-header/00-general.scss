@@ -1,0 +1,19 @@
+
+
+@if $file == global {
+  #header {
+    border-bottom: 1px solid #dbdbdb;
+    position: relative;
+    z-index: 2;
+  }
+
+  .region-header {
+    float: right;
+    height: 82px;
+
+    .block {
+      float: left;
+      padding-left: 30px;
+    }
+  }
+}
