@@ -1,0 +1,21 @@
+
+
+
+@if $file == global {
+  #block-delta-blocks-site-name {
+    float: left;
+
+    h2 {
+      font-family: $font-family-sans-serif;
+      font-size: 16px;
+    }
+
+    a {
+      color: white;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

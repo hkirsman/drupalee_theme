@@ -1,116 +1,116 @@
 
 
-// Load the fonts.
-@import url('../fonts/stylesheet.css');
-
-
 
 @if $file == editor {
+  // Load the fonts.
+  @import url('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans');
+
   body {
     margin: 15px;
-    max-width: 830px
+    max-width: 960px
   }
 }
 
 
 
-@if $file == editor or
-    $file == global {
-  // Overwrite Bootstrap default margin of text elements.
-  h1, .h1,
-  h2, .h2,
-  h3, .h3,
-  h4, .h4,
-  h5, .h5,
-  h6, .h6,
-  p,
-  ul,
-  ol {
-    margin-bottom: $line-height-computed;
-  }
-  blockquote {
-    padding: $line-height-computed;
-  }
-  pre {
-    margin-bottom: $line-height-computed;
-    padding: ($line-height-computed - 1);
+@if $file == global or
+    $file == editor {
+  h1, h2, h3 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
   }
 
-  .node .field-name-body {
-    ul {
-      list-style-type: none;
-      margin-left: 0;
-      padding-left: 0;
-
-      li {
-        background-image: url(../img/bullet.png);
-        background-position: 0 0.4em;
-        background-repeat: no-repeat;
-        // font-weight: bold;
-        font-family: $font-family-serif-bold;
-        padding-left: 17px;
-      }
-    }
+  h4 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 400;
+    margin-bottom: 0;
   }
 
-  strong,
-  b {
-    font-family: $font-family-serif-bold;
-    font-weight: normal;
+  // Used for frontpage hero.
+  // @todo: move to sass\includes\10-header\hero.scss ?
+  .overlay {
+    position: relative;
+    z-index: 10;
+  }
+
+  img {
+    max-width: 100%;
   }
 }
 
 
 
 @if $file == global {
-  html,
   body {
-    height: 100%;
+    background: #fff;
   }
 
-  .wrap {
-    margin-bottom: -102px;
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
+  .intro {
+    font-size: 18px;
   }
 
-  footer.footer {
-    margin-top: 0;
-    padding: 0;
+  header {
+    background: #000000;
+    xbackground: #0086c5;
+    padding: 0 0 60px 0;
+    text-align: center;
+    margin-bottom: 40px;
   }
-
-  footer.footer .container,
-  .push {
-    height: 102px;
+  .news {
+    border-top: 1px solid #ccc;
+    list-style: none;
+    margin: 20px 0 20px 0;
+    padding: 20px 0 0 0;
   }
-
-  body {
-    // background: #006BA7;
+  .news li {
+    margin-bottom: 5px;
   }
-
-  img {
-    // max-width: 100%;
+  .community {
+    background: #f0f0f0;
+    margin: 40px 0 0 0;
+    padding: 20px 0;
   }
-
-  iframe {
-    // display: block;
-    // width: 100%;
+  .community h3 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
   }
-
-  // Fix body top margin if admin-menu is active.
-  body.admin-menu {
-    margin-top: 29px !important;
+  .tagline {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 36px;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
   }
-
-  // To fix the "Panels In-Place Editor".
-  // It might break other modals because I don't know why the default settings where not there.
-  .modal-body {
-    overflow: auto;
-    padding: 1em 1em 0 1em;
+  .supporters {
+    margin: 40px 0;
   }
-
-  .form-control {
-    box-shadow: none;
+  .footer {
+    line-height: 22px;
+    background: #222;
+    color: white;
+    padding: 20px;
   }
+  header {
+    position: relative;
+    overflow: hidden;
+  }
+  .vspace {
+    margin: 20px 0;
+  }
+  .showcase a {
+    display: block;
+    margin: 10px 0;
+  }
+  .csep {
+    border-top: 1px solid #ddd;
+    margin: 40px 0;
+    padding: 40px 0;
+  }
+  .dries {
+    margin-bottom: 20px;
+  }
+  .badge {
+    margin-right: 1em;
+  }
+  @-webkit-keyframes -webkit-rotating-earth {0% {} 100% {-webkit-transform:rotate(+72deg);}}
 }

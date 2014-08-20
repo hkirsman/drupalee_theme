@@ -1,0 +1,13 @@
+
+
+
+@if $file == global {
+  #block-delta-blocks-logo {
+    float: left;
+    margin-right: 20px;
+
+    img {
+      width: 50px;
+    }
+  }
+}
